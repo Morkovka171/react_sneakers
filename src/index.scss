@@ -26,6 +26,10 @@ header {
   p {
     margin: 0;
   }
+  li{
+    display: flex;
+    align-items: center;
+  }
 }
 .content {
   h1 {
@@ -169,4 +173,8 @@ header {
       opacity: 1;
     }
   }
+}
+//Кастомные стили
+.wrapper_card {
+  justify-content: space-between;
 }
