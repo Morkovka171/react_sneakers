@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import Card from "./components/Card";
 import Header from "./components/Header";
 import Drawer from "./components/Drawer";
@@ -10,16 +11,20 @@ function App() {
   const [cartOpened, setCartOpened] = React.useState(false);
 
   React.useEffect(() => {
-    fetch("https://639f0f125eb8889197f35361.mockapi.io/sneakers")
+    axios
+      .get("https://639f0f125eb8889197f35361.mockapi.io/sneakers")
       .then((res) => {
-        return res.json();
-      })
-      .then((json) => {
-        setItems(json);
+        setItems(res.data);
+      });
+      axios
+      .get("https://639f0f125eb8889197f35361.mockapi.io/cart")
+      .then((res) => {
+        setCartItems(res.data);
       });
   }, []);
 
   const onAddToCart = (obj) => {
+    axios.post("https://639f0f125eb8889197f35361.mockapi.io/cart", obj);
     setCartItems((prev) => [...prev, obj]);
   };
 
@@ -66,7 +71,9 @@ function App() {
         </div>
         <div className="d-flex flex-wrap wrapper_card">
           {items
-            .filter((item) => item.title.toLowerCase().includes(searhValue.toLowerCase()))
+            .filter((item) =>
+              item.title.toLowerCase().includes(searhValue.toLowerCase())
+            )
             .map((item, index) => (
               <Card
                 key={index}
