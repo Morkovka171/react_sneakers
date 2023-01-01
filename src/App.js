@@ -70,6 +70,7 @@ function App() {
 
   const onChangeSearchInput = (event) => {
     setSearchValue(event.target.value);
+    setSearchValue(event.target.value);
   };
 
   return (
@@ -105,7 +106,7 @@ function App() {
             <Favorites items={favorites} onAddToFavorite={onAddToFavorite} />
           }
         />
-      </Routes>
+        </Routes>
     </div>
   );
 }
