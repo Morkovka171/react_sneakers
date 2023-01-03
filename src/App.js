@@ -6,6 +6,7 @@ import Drawer from "./components/Drawer";
 import AppContext from "./context";
 import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
+import Orders from "./pages/Orders";
 
 function App() {
   const [items, setItems] = React.useState([]);
@@ -94,7 +95,7 @@ function App() {
         onAddToFavorite,
         setCartOpened,
         setCartItems,
-        
+        onAddToCart
       }}
     >
       <div className="wrapper clear">
@@ -125,6 +126,7 @@ function App() {
             }
           />
           <Route path="/favorites" element={<Favorites />} />
+          <Route path="/orders" element={<Orders />} />
         </Routes>
       </div>
     </AppContext.Provider>
