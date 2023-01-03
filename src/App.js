@@ -28,7 +28,6 @@ function App() {
       );
 
       setIsLoading(false);
-
       setCartItems(cartResponse.data);
       setFavorites(favoritesResponse.data);
       setItems(itemsResponse.data);
@@ -95,6 +94,7 @@ function App() {
         onAddToFavorite,
         setCartOpened,
         setCartItems,
+        
       }}
     >
       <div className="wrapper clear">
