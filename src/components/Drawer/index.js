@@ -37,6 +37,7 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
       }
     } catch (error) {
       alert("Ошибка при создании заказа");
+      console.error(error);
     }
     setIsLoading(false);
   };
