@@ -195,6 +195,54 @@ header {
   }
 }
 
+.NoCardsMessageWrapper {
+  height: 680px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.NoCardsMessageBox {
+
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .greenButton {
+    padding-left: 20px;
+    width: 245px;
+    position: relative;
+
+    img {
+      position: absolute;
+      left: 31px;
+      top: 50%;
+      transform: translateY(-45%) rotate(180deg);
+      transition: all .3s;
+    }
+
+    &:hover {
+      img {
+        left: 24px;
+      }
+    }
+  }
+
+  h2 {
+    margin-top: 24px;
+    margin-bottom: 11px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 41px;
+    opacity: .5;
+  }
+
+}
+
 @keyframes button-loading {
   0%{
     opacity: 1;

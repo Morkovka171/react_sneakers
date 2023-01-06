@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 
 import Card from "../components/Card";
+import NoCardsMessage from '../components/NoCardsMessage';
 import AppContext from "../context";
 
 function Orders() {
@@ -33,6 +34,13 @@ function Orders() {
         {(isLoading ? [...Array(8)] : orders).map((item, index) => (
           <Card key={index} loading={isLoading} {...item} />
         ))}
+        {orders.length === 0 && (
+          <NoCardsMessage
+            image={"/img/sad.svg"}
+            title={"У вас нет заказов"}
+            text={"Оформите хотя бы один заказ"}
+          />
+        )}
       </div>
     </div>
   );

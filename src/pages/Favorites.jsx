@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../components/Card";
+import NoCardsMessage from '../components/NoCardsMessage';
 import AppContext from "../context";
 
 function Favorites() {
@@ -19,6 +20,14 @@ function Favorites() {
             {...item}
           />
         ))}
+        {
+          favorites.length === 0 && 
+          <NoCardsMessage
+            image={"/img/sad-2.svg"}
+            title={"Закладок нет :("}
+            text={"Вы ничего не добавляли в закладки"}
+          />
+        }
       </div>
     </div>
   );

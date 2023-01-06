@@ -115,6 +115,10 @@ function App() {
     return cartItems.some((obj) => Number(obj.parentId) === Number(id));
   };
 
+  const isItemFavorited = (id) => {
+    return favorites.some((obj) => obj.parentId === Number(id));
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -122,6 +126,7 @@ function App() {
         cartItems,
         favorites,
         isItemAdded,
+        isItemFavorited,
         onAddToFavorite,
         setCartOpened,
         setCartItems,
