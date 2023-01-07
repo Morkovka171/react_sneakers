@@ -95,8 +95,6 @@ header {
   }
 }
 
-
-
 .cartTotalBlock {
   ul {
     display: block;
@@ -120,7 +118,7 @@ header {
   .greenButton {
     position: relative;
 
-    &:disabled{
+    &:disabled {
       animation: button-loading 0.6s ease-in-out infinite;
     }
 
@@ -204,7 +202,6 @@ header {
 }
 
 .NoCardsMessageBox {
-
   width: 290px;
   display: flex;
   flex-direction: column;
@@ -220,7 +217,7 @@ header {
       left: 31px;
       top: 50%;
       transform: translateY(-45%) rotate(180deg);
-      transition: all .3s;
+      transition: all 0.3s;
     }
 
     &:hover {
@@ -238,19 +235,91 @@ header {
   p {
     margin-top: 0;
     margin-bottom: 41px;
-    opacity: .5;
+    opacity: 0.5;
   }
-
 }
 
 @keyframes button-loading {
-  0%{
+  0% {
     opacity: 1;
   }
-  50%{
+  50% {
     opacity: 0.7;
   }
-  100%{
+  100% {
     opacity: 1;
   }
+}
+
+.sliderWrapper {
+  width: calc(100% - 60px - 60px);
+  overflow: hidden;
+  margin: 45px 60px 30px 60px;
+  border-radius: 20px;
+
+  .sliderContainer {
+    display: flex;
+    transition: all 0.5s ease-in-out;
+
+    .slideWrapper {
+      min-width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      .slideContentWrapper {
+        max-width: 240px;
+        margin-left: 60px;
+        h3 {
+          font-size: 38px;
+          margin: 0 0 30px 0;
+          span {
+            color: #8bb43c;
+          }
+        }
+        button {
+          background-color: #a5d364;
+          border-radius: 110px;
+          border: none;
+          color: #fff;
+          text-transform: uppercase;
+          padding: 14px 50px;
+          font-weight: 700;
+          display: block;
+          cursor: pointer;
+          &:hover {
+            background-color: lighten(#9dd558, 5%);
+          }
+        }
+      }
+    }
+  }
+}
+.arrowBtn {
+  position: absolute;
+  top: 50%;
+  
+  height: 35px;
+  width: 35px;
+  background-image: url('../public/img/arrowBtn.svg');
+  background-position: center 27%;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.arrowRightBtn {
+  transform: translateY(-50%) rotate(180deg);
+  left: 40px;
+}
+.arrowLeftBtn {
+  transform: translateY(-50%);
+  right: 40px;
+}
+.sliderSectionContainer{
+  position: relative;
 }

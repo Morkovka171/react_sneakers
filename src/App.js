@@ -7,6 +7,7 @@ import AppContext from "./context";
 import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
 import Orders from "./pages/Orders";
+import Slider from "./components/Slider";
 
 function App() {
   const [items, setItems] = React.useState([]);
@@ -142,21 +143,24 @@ function App() {
         />
 
         <Header onClickCart={() => setCartOpened(true)} />
-
+        
         <Routes>
           <Route
             path="/"
             element={
-              <Home
-                cartItems={cartItems}
-                items={items}
-                searchValue={searchValue}
-                setSearchValue={setSearchValue}
-                onChangeSearchInput={onChangeSearchInput}
-                onAddToFavorite={onAddToFavorite}
-                onAddToCart={onAddToCart}
-                isLoading={isLoading}
-              />
+              <>
+                  <Slider />
+                  <Home
+                  cartItems={cartItems}
+                  items={items}
+                  searchValue={searchValue}
+                  setSearchValue={setSearchValue}
+                  onChangeSearchInput={onChangeSearchInput}
+                  onAddToFavorite={onAddToFavorite}
+                  onAddToCart={onAddToCart}
+                  isLoading={isLoading}
+                />
+              </>
             }
           />
           <Route path="/favorites" element={<Favorites />} />
