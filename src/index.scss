@@ -16,7 +16,9 @@ body {
   max-width: 1080px;
   margin: 50px auto;
 }
-
+.wrapper_card {
+  justify-content: center;
+}
 header {
   border-bottom: 1px solid #eaeaea;
   img {
@@ -270,6 +272,7 @@ header {
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
+      border-radius: 20px;
       .slideContentWrapper {
         max-width: 240px;
         margin-left: 60px;
@@ -298,13 +301,13 @@ header {
     }
   }
 }
-.arrowBtn {
+.swiper-button-prev,
+.swiper-button-next {
   position: absolute;
   top: 50%;
-  
   height: 35px;
   width: 35px;
-  background-image: url('../public/img/arrowBtn.svg');
+  background-image: url("../public/img/arrowBtn.svg");
   background-position: center 27%;
   border-radius: 50%;
   overflow: hidden;
@@ -312,14 +315,44 @@ header {
   cursor: pointer;
 }
 
-.arrowRightBtn {
+.swiper-button-prev {
   transform: translateY(-50%) rotate(180deg);
-  left: 40px;
+  left: 5px;
 }
-.arrowLeftBtn {
+.swiper-button-next {
   transform: translateY(-50%);
-  right: 40px;
+  right: 5px;
 }
-.sliderSectionContainer{
+.sliderSectionContainer {
   position: relative;
+}
+@media (max-width: 700px) {
+  header.header {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  div.homeWrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .NoCardsMessageWrapper {
+    height: 300px;
+  }
+}
+@media (max-width: 450px) {
+  .sliderWrapper {
+    width: calc(100% - 10px - 10px);
+    margin: 45px 10px 30px 10px;
+  }
 }

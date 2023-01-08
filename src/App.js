@@ -120,6 +120,16 @@ function App() {
     return favorites.some((obj) => obj.parentId === Number(id));
   };
 
+  const handleSetCartOpened = (value) => {
+    const body = document.querySelector('body');
+    if (value) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = 'auto';
+    }
+    setCartOpened(value);
+  }
+
   return (
     <AppContext.Provider
       value={{
@@ -137,12 +147,12 @@ function App() {
       <div className="wrapper clear">
         <Drawer
           items={cartItems}
-          onClose={() => setCartOpened(false)}
+          onClose={() => handleSetCartOpened(false)}
           onRemove={onRemoveItem}
           opened={cartOpened}
         />
 
-        <Header onClickCart={() => setCartOpened(true)} />
+        <Header onClickCart={() => handleSetCartOpened(true)} />
         
         <Routes>
           <Route

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Slide = ({image, title, onBtnClick}) => {
+const Slide = ({image, title, onBtnClick, wrapperStyles = {}, buttonStyles = {} }) => {
   return (
-    <div style={{backgroundImage: `url(${image})`}} className='slideWrapper'>
-      <div className='slideContentWrapper'>
+    <div style={{backgroundImage: `url(${image})`, ...wrapperStyles}} className='slideWrapper'>
+      <div className='slideContentWrapper' >
       {title}
-      <button onClick={onBtnClick}>Купить</button>
+      <button onClick={onBtnClick} style={{...buttonStyles}}>Купить</button>
       </div>
     </div>
   )

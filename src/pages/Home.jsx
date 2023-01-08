@@ -28,7 +28,7 @@ function Home({
 
   return (
     <div className="content p-40">
-      <div className="d-flex align-center mb-40 justify-between">
+      <div className="d-flex align-center mb-40 justify-between homeWrapper">
         <h1>
           {searchValue ? `Поиск по запросу:"${searchValue}"` : "Все кроссовки"}
         </h1>
