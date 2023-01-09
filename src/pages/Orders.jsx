@@ -28,7 +28,7 @@ function Orders() {
   return (
     <div className="content p-40">
       <div className="d-flex align-center mb-40 justify-between">
-        <h1>Мои заказы</h1>
+        <h1>Мои заказы </h1>
       </div>
       <div className="d-flex flex-wrap wrapper_card">
         {(isLoading ? [...Array(8)] : orders).map((item, index) => (
