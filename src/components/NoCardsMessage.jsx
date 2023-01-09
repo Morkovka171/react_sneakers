@@ -8,7 +8,7 @@ const NoCardsMessage = ({ image, title, text }) => {
         <img src={image} alt="sadEmoji" />
         <h2>{title}</h2>
         <p>{text}</p>
-        <Link to="/">
+        <Link to="">
           <button className="greenButton">
             <img src="img/arrow.svg" alt="Arrow" />
             Вернуться назад
