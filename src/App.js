@@ -157,6 +157,7 @@ function App() {
         <Routes>
           <Route
             path=""
+            exact
             element={
               <>
                   <Slider />
@@ -173,8 +174,8 @@ function App() {
               </>
             }
           />
-          <Route path="favorites" element={<Favorites />} />
-          <Route path="orders" element={<Orders />} />
+          <Route path="favorites" exact element={<Favorites />} />
+          <Route path="orders" exact element={<Orders />} />
         </Routes>
       </div>
     </AppContext.Provider>
