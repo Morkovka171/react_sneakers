@@ -24,8 +24,8 @@ const Slider = () => {
           <span>ЪУЪ!</span> Не смотри сюда!
         </h3>
       ),
-      onBtnClick: () => alert("Ты нажал второй слайд"),
-      wrapperStyles: {backgroundPositionY: '50%'},
+      onBtnClick: () => alert("Ты нажал второй слайд"), 
+      wrapperStyles: {backgroundPositionY: '60%'},
       
     },
     {
