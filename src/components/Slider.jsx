@@ -25,18 +25,18 @@ const Slider = () => {
         </h3>
       ),
       onBtnClick: () => alert("Ты нажал второй слайд"), 
-      wrapperStyles: {backgroundPositionY: '60%'},
+      wrapperStyles: {backgroundPositionY: '50%'},
       
     },
     {
       image: "img/pokek_3.jpg",
       title: (
         <h3 style={{color: '#fff'}}>
-          <span></span>ЪЕЪ)
+          <span></span>Пливет :-)
         </h3>
       ),
       onBtnClick: () => alert("Ты нажал третий слайд"),
-      wrapperStyles: {backgroundPositionY: '50%'},
+      wrapperStyles: {backgroundPositionY: '60%'},
     },
   ];
 
