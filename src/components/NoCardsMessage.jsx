@@ -10,7 +10,7 @@ const NoCardsMessage = ({ image, title, text }) => {
         <p>{text}</p>
         <Link to="/">
           <button className="greenButton">
-            <img src="/img/arrow.svg" alt="Arrow" />
+            <img src="img/arrow.svg" alt="Arrow" />
             Вернуться назад
           </button>
         </Link>

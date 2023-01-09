@@ -36,7 +36,7 @@ function Orders() {
         ))}
         {orders.length === 0 && (
           <NoCardsMessage
-            image={"/img/sad.svg"}
+            image={"img/sad.svg"}
             title={"У вас нет заказов"}
             text={"Оформите хотя бы один заказ"}
           />

@@ -7,7 +7,7 @@ import "swiper/css";
 const Slider = () => {
   const sliders = [
     {
-      image: "/img/SlideFirst.png",
+      image: "img/SlideFirst.png",
       title: (
         <h3>
           <span>Кермит</span> уже здесь!
@@ -18,7 +18,7 @@ const Slider = () => {
       buttonStyles: {},
     },
     {
-      image: "/img/pokek_2.jpg",
+      image: "img/pokek_2.jpg",
       title: (
         <h3 style={{color: '#fff'}}>
           <span>ЪУЪ!</span> Не смотри сюда!
@@ -29,7 +29,7 @@ const Slider = () => {
       
     },
     {
-      image: "/img/pokek_3.jpg",
+      image: "img/pokek_3.jpg",
       title: (
         <h3 style={{color: '#fff'}}>
           <span></span>ЪЕЪ)

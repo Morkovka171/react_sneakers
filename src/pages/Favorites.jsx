@@ -23,7 +23,7 @@ function Favorites() {
         {
           favorites.length === 0 && 
           <NoCardsMessage
-            image={"/img/sad-2.svg"}
+            image={"img/sad-2.svg"}
             title={"Закладок нет :("}
             text={"Вы ничего не добавляли в закладки"}
           />
